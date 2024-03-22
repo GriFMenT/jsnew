@@ -430,9 +430,9 @@ btn4.addEventListener('click', function () {
 })
 
 let inpval = JSON.parse(localStorage.getItem('input'))
-for (let i = 0; i < inputs.length; i++) {
-	inputs[i].value = inpval[i] || ''
-}
+// for (let i = 0; i < inputs.length; i++) {
+// 	inputs[i].value = inpval[i] || ''
+// }
 
 let igp1 = document.querySelector('#zad-95 #inp1')
 let igp2 = document.querySelector('#zad-95 #inp2')
@@ -458,3 +458,256 @@ console.log(users)
 // zad-2
 
 // zad-3
+
+// zad-96 - 136
+let strRep = 'ahb acb aeb aeeb adcb axeb'
+console.log(strRep.replace(/a.b/g, 'нашёл '))
+
+let strRep2 = 'aba aca aea abba adca abea'
+console.log(strRep2.replace(/a..a/g, 'нашёл '))
+console.log(strRep2.replace(/ab.a/g, 'нашёл '))
+
+let strRep4 = 'aa aba abba abbba abca abea'
+console.log(strRep4.replace(/ab+a/g, 'нашёл '))
+console.log(strRep4.replace(/ab*a/g, 'нашёл '))
+console.log(strRep4.replace(/ab?a/g, 'нашёл '))
+console.log(strRep4.replace(/ab*a/g, 'нашёл '))
+
+let strRep5 = 'ab abab abab abababab abea'
+console.log(strRep5.replace(/(ab)+/g, 'нашёл '))
+
+let strRep6 = 'a.a aba aea'
+console.log(strRep6.replace(/a\.a/g, 'нашёл '))
+
+let strRep7 = '2+3 223 2223'
+console.log(strRep7.replace(/2\+3/g, 'нашёл '))
+
+let strRep8 = '23 2+3 2++3 2+++3 345 567'
+console.log(strRep8.replace(/2\++3/g, 'нашёл '))
+
+let strRep9 = '23 2+3 2++3 2+++3 445 677'
+console.log(strRep9.replace(/2\+*3/g, 'нашёл '))
+
+let strRep10 = '*+ *q+ *qq+ *qqq+ *qqq qqq+'
+console.log(strRep10.replace(/\*q+\+/g, 'нашёл '))
+
+let strRep11 = '[abc] {abc} abc (abc) [abc]'
+console.log(strRep11.replace(/\[...\]/g, '!'))
+
+let strRep12 = 'aa aba abba abbba abbbba abbbbba'
+console.log(strRep12.replace(/ab{2,4}a/g, 'нашёл '))
+console.log(strRep12.replace(/ab{1,3}a/g, 'нашёл '))
+console.log(strRep12.replace(/ab{4,}a/g, 'нашёл '))
+
+let strRep13 = 'aba accca azzza wwwwa'
+console.log(strRep13.replace(/a??a/g, '!'))
+
+let strRep14 = 'a1a a2a a3a a4a a5a aba aca'
+console.log(strRep14.replace(/a\da/g, 'нашёл '))
+
+let strRep15 = 'a1a a22a a333a a4444a a55555a aba aca'
+console.log(strRep15.replace(/a\d+a/g, 'нашёл '))
+
+let strRep16 = 'aa a1a a22a a333a a4444a a55555a aba aca'
+console.log(strRep16.replace(/a\d*a/g, 'нашёл '))
+
+let strRep17 = 'avb a1b a2b a3b a4b a5b abb acb'
+console.log(strRep17.replace(/a\Db/g, 'нашёл '))
+
+let strRep18 = 'ave a#b a2b a$b a4b a5b a-b acb'
+console.log(strRep18.replace(/a\Wb/g, 'нашёл '))
+console.log(strRep18.replace(/\s/g, ' ! '))
+
+let strRep19 = 'aba aea aca aza axa'
+console.log(strRep19.replace(/a[bex]a/g, 'нашёл '))
+
+let strRep20 = 'a1a a3a a7a a9a aba'
+console.log(strRep20.replace(/a[3-6]a/g, 'нашёл '))
+
+let strRep21 = 'aba aea afa aha aga'
+console.log(strRep21.replace(/a[a-g]a/g, 'нашёл '))
+console.log(strRep21.replace(/a[a-fj-z]a/g, 'нашёл '))
+
+let strRep22 = 'aAa aea aEa aJa a3a'
+console.log(strRep22.replace(/a[a-fA-D]a/g, 'нашёл '))
+
+let strRep23 = 'aAXa aeffa aGha aza ax23a a3sSa'
+console.log(strRep23.replace(/a[a-z]+a/g, 'нашёл '))
+console.log(strRep23.replace(/a[a-z\d]+a/g, 'нашёл ')) // либо [a-z0-9]
+
+let strRepX = ''
+console.log(strRepX.replace(/1[^ex]2/g, 'нашёл '))
+console.log(strRepX.replace(/x[^2-7]z/g, 'нашёл '))
+console.log(strRepX.replace(/x[^A-Z]+z/g, 'нашёл '))
+console.log(strRepX.replace(/x[^A-Za-z1-5]+z/g, 'нашёл '))
+
+let strRep24 = 'wйw wяw wёw wqw'
+console.log(strRep24.replace(/w[а-яёА-ЯЁ]w/g, 'нашёл '))
+
+let strRep25 = 'ааа ббб ёёё ззз ййй ААА БББ ЁЁЁ ЗЗЗ ЙЙЙ'
+console.log(strRep25.replace(/[а-яёА-ЯЁ]*/g, 'нашёл '))
+
+let strRep26 = 'aba aea aca aza axa a.a a+a a*a'
+console.log(strRep26.replace(/a[.+*]a/g, 'нашёл '))
+
+let strRep27 = 'xaz x.z x3z x@z x$z xrz'
+console.log(strRep27.replace(/x[^.@$]z/g, 'нашёл '))
+
+console.log(strRepX.replace(/[\d.]+/g, 'нашёл '))
+console.log(strRepX.replace(/[\Wa-g]{3,7}/g, 'нашёл '))
+
+let strRep28 = 'x[]z x[[]]z x()z'
+console.log(strRep28.replace(/x[\[\]]*z/g, 'нашёл '))
+
+let strRep29 = 'x[]z x{}z x.z x()z x([])z'
+console.log(strRep29.replace(/x[\[\](){}]*z/g, 'нашёл '))
+
+let strRep30 = '^xx axx ^zz bkk @ss'
+console.log(strRep30.replace(/[^\^\s][a-zA-Z][a-zA-Z]/g, 'нашёл '))
+
+let strRep31 = 'xaz xBz xcz x-z x@z'
+console.log(strRep31.replace(/x[a-zA-Z-]z/g, 'нашёл '))
+
+let strRep32 = 'xaz x$z x-z xcz x+z x%z x*z'
+console.log(strRep32.replace(/x[$\-+]z/g, 'нашёл '))
+
+// let xxx = str.replace(/[a-z]/gi, '!')
+
+let strRep33 = 'abc def xyz'
+console.log(strRep33.replace(/^[a-zA-Z]+/g, 'нашёл '))
+console.log(strRep33.replace(/[a-zA-Z]+$/g, 'нашёл '))
+console.log(strRep33.replace(/\b/g, '#'))
+console.log(strRep33.replace(/\B/g, '+'))
+
+console.log(strRepX.replace(/$/gm, '!'))
+console.log(strRepX.replace(/^/gm, '! '))
+console.log(strRepX.replace(/\b/g, '! '))
+console.log(strRepX.replace(/[\b\t]/g, '! '))
+console.log(strRepX.replace(/[\b\n]/gm, '! '))
+console.log(strRepX.replace(/^/gm, '     !'))
+
+let strRep34 = 'aeeea aeea aea axa axxa axxxa'
+console.log(strRep34.replace(/a(e*|x*)a/g, 'нашёл '))
+console.log(strRep34.replace(/a(e{2}|x*)a/g, 'нашёл '))
+
+let strRep35 = 'a aa aaa aaaa aaaa'
+let rep35 = /a+/g
+console.log(strRep35.replace(rep35, 'нашёл '))
+
+console.log(/^http:\/\//g.test('http://'))
+console.log(/^https?:\/\//g.test('https://'))
+console.log(/.+[txt | php | html]$/.test('ddd.html ddd.txt ddd.php'))
+console.log(/.+jpe?g$/g.test('123.jpg 123.jpeg'))
+console.log(/.+[jpe?g | png]$/g.test('123.jpg 123.jpeg 123.png'))
+console.log(/^\d{1,12}$/g.test('123456789'))
+console.log(
+	/^[0-3][0-9]\.[1-9][0-2]\.[0-2][0-1][0-9][0-9]$/g.test('20.11.2005')
+)
+console.log(/^[0-2][0-9]\:[0-6][0-9]\:[0-6][0-9]$/g.test('18:10:30'))
+console.log(/^\w{1,15}@\w{1,10}\.\w{1,5}$/g.test('pochta@gmail.com'))
+console.log(/^\w{1,99}\.\w{1,99}$/g.test('code.mu'))
+
+let strRep36 = '1 23 456 789'
+console.log(strRep36.search(/\d{3}/g))
+
+let strRep37 = '2025-12-31 12:59:59'
+console.log(strRep37.split(/[\-\:\s]/g))
+
+let strRep38 = 'aaa 123 bbb'
+console.log(strRep38.match(/\d+/)[0])
+console.log(strRep38.match(/\d+/).index)
+
+let strRep39 = 'sss domain.ru zzz'
+console.log(strRep39.match(/(\w+)\.(ru)/)[0])
+console.log(strRep39.match(/(\w+)\.(ru)/)[1])
+console.log(strRep39.match(/(\w+)\.(ru)/)[2])
+
+let strRep40 = '31.12.2025'
+console.log(strRep40.match(/(\d+)\.(\d+)\.(\d+)/)[0])
+console.log(strRep40.match(/(\d+)\.(\d+)\.(\d+)/)[1])
+console.log(strRep40.match(/(\d+)\.(\d+)\.(\d+)/)[2])
+console.log(strRep40.match(/(\d+)\.(\d+)\.(\d+)/)[3])
+
+let strRep41 = 'site.ru sss site.com zzz site.net'
+console.log(strRep41.match(/\w+\.\w+/g))
+
+let strRep42 = 'a1b c34d x567z'
+let resRep42 = strRep42.match(/\d+/g)
+for (let res of resRep42) {
+	sum += Number(res)
+}
+console.log(sum)
+
+let strRep43 = '12:37 15:48 17:59'
+let resRep43 = strRep43.matchAll(/(\d\d)\:(\d\d)/g)
+for (let match of resRep43) {
+	console.log(match)
+}
+
+let strRep44 = 'site.ru sss site.com zzz site.net'
+let resRep44 = strRep44.matchAll(/(\w+)\.(\w+)/g)
+for (let match of resRep44) {
+	console.log(match)
+}
+
+let strRep45 = '12:37:57 15:48:58 17:59:59'
+let regex = /(\d\d)\:(\d\d)\:(\d\d)/g
+let resRep45
+while ((resRep45 = regex.exec(strRep45))) {
+	console.log(resRep45)
+}
+
+let strRep46 = '12:37 15:48 17:59'
+let regRep46 = /(\d\d)\:(\d\d)/g
+regRep46.lastIndex = 4
+let resRep46 = regRep46.exec(strRep46)
+console.log(resRep46)
+
+let strRep47 = '12 34 56 78'
+console.log(strRep47.replace(/(\d)(\d)/g, '$2$1'))
+
+let strRep48 = '31.12.2025'
+console.log(strRep48.replace(/(\d\d)\.(\d\d)\.(\d\d\d\d)/g, '$3.$2.$1'))
+
+let strRep49 = 'aaa [2] bbb [3] ccc [12] ddd'
+let resRep49 = strRep49.replace(/\d+/g, function (match) {
+	return match * 2
+})
+console.log(resRep49)
+
+let strRep50 = '123 456 789'
+let resRep50 = strRep50.replace(/(\d+)/g, function (match) {
+	return match.split('').reverse().join('')
+})
+console.log(resRep50)
+
+let strRep51 = '31.12.2025 30.11.2024 29.10.2023'
+let resRep51 = strRep51.replace(/(\d\d\.\d\d\.\d\d\d\d)/g, function (match) {
+	return match.split('.').reverse().join('-')
+})
+console.log(resRep51)
+
+let strRep52 = 'a1b2c3'
+console.log(strRep52.replace(/(\d)/g, ' $1$1$1 '))
+
+let strRep53 = 'sss site.ru zzz site.com kkk'
+console.log(strRep53.replace(/(\w+\.\w+)/g, 'http://$1'))
+
+let strRep54 = 'aaa bbb ccc xyz'
+console.log(strRep54.replace(/([a-z])\1/g, 'нашёл '))
+
+let strRep55 = 'a aa aaa aaaa aaaaa'
+console.log(strRep55.replace(/([a-z]){1,}\1/g, 'нашёл '))
+
+let strRep56 = 'aaa aaa bbb bbb ccc ddd'
+console.log(strRep56.replace(/([a-z]+)\s\1/g, 'нашёл '))
+
+let strRep57 = '12:59:59'
+let regRep57 = /(?<hours>\d{2})\:(?<minutes>\d{2})\:(?<seconds>\d{2})/
+let resRep57 = strRep57.match(regRep57)
+console.log(resRep57.groups)
+console.log(resRep57.groups.hours)
+console.log(resRep57.groups.minutes)
+console.log(resRep57.groups.seconds)
+
+// TODO: 131 - 136
